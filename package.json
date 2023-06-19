@@ -1,0 +1,50 @@
+{
+  "name": "sky-koala",
+  "description": "Torin's sky-koala monorepo.",
+  "scripts": {
+    "format": "yarn prettier && yarn lint",
+    "lint": "npx eslint . --ext .js,.jsx,.md,.ts,.tsx,.graphql --fix",
+    "prettier": "npx prettier . --check --write",
+    "audit": "yarn npm audit --all --recursive",
+    "ws:clean": "yarn workspaces foreach -ptv --include '@workspaces/*' run clean",
+    "ws:list": "yarn workspaces list",
+    "ws:up": "yarn upgrade-interactive",
+    "dev": "turbo run dev",
+    "dev:demo": "turbo run dev --filter=@sky-koala/demo",
+    "build": "turbo run build --continue",
+    "build:demo": "yarn workspace @sky-koala/demo build",
+    "start": "turbo run start",
+    "start:demo": "yarn workspace @sky-koala/demo start",
+    "test": "turbo run test --continue",
+    "test:demo": "turbo run test --filter=@sky-koala/demo --no-deps"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "turbo": "1.10.3"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.0",
+    "eslint": "8.42.0",
+    "eslint-config-sky-koala": "workspace:^"
+  },
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "homepage": "https://github.com/m-torin/sky-koala",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-torin/sky-koala"
+  },
+  "author": {
+    "name": "Torin Taylor",
+    "url": "https://github.com/m-torin"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.x",
+    "yarn": ">=3.x"
+  },
+  "packageManager": "yarn@3.6.0"
+}
