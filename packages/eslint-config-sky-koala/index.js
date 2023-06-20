@@ -77,6 +77,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off', // https://nextjs.org/docs/advanced-features/codemods#add-missing-react-import
     'react/no-typos': 'warn',
+    'react/no-unescaped-entities': 'off',
     'react/prefer-es6-class': [2, 'always'],
     'react/prefer-stateless-function': [2, {ignorePureComponents: true}],
     'react/prop-types': 'off', // TODO: Remove when tslinting restored

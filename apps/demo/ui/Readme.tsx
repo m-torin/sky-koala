@@ -22,10 +22,10 @@ export const Assumptions = () => (
     </Heading>
 
     <Text fontSize="md" mb={5}>
-      Reviewing the `mock_application.json` file revealed a complex API schema which
-      shows signs of stress from rapid feature set growth. With a limited
-      understanding of the <em>why</em> things are in specific places, I made the
-      following assumptions:
+      Reviewing the <Code>mock_application.json</Code> file revealed a complex API
+      schema which shows signs of stress from rapid feature set growth. With a
+      limited understanding of the <em>why</em> things are in specific places, I made
+      the following assumptions:
     </Text>
 
     <List spacing={3}>
@@ -36,7 +36,7 @@ export const Assumptions = () => (
       </ListItem>
       <ListItem>
         <ListIcon as={CheckIcon} color="black.300" />
-        Its the <Code colorScheme="orange">Views</Code> within each{' '}
+        It's the <Code colorScheme="orange">Views</Code> within each{' '}
         <Code colorScheme="orange">Scene</Code> that should be deduplicated on{' '}
         <Code colorScheme="green">Key</Code>, which represents recursive actions.
       </ListItem>
@@ -58,7 +58,7 @@ export const Codebase = () => (
     <Box mb={5}>
       <Text>
         This repository is a Yarn 3 Workspace + Turborepo monorepo. It contains
-        support for things liek Centralized eslint, prettier configs, and types. This
+        support for things like Centralized eslint, prettier configs, and types. This
         structure can quickly be extended to balance microservice architecture with
         monorepo convenience.
       </Text>
@@ -139,8 +139,8 @@ export const Verification = () => (
         <Link color={'blue.500'} href="/api/deduplicate">
           deduplicate endpoint
         </Link>{' '}
-        returns obecjts and scenes with the subresponse of:{' '}
-        <Code>**: {`{dedupCount: 1, source: {}, appData: {}, remvoed: {}`}</Code>.
+        returns objects and scenes with the subresponse of:{' '}
+        <Code>**: {`{dedupCount: 1, source: {}, appData: {}, removed: {}`}</Code>.
       </ListItem>
 
       <ListItem>
@@ -158,7 +158,7 @@ export const Verification = () => (
           Scenes
         </Link>
         .<br />
-        For Scenes the deduplicated id is <Code>id: 61e86a5d1137bc002545ff11</Code>.
+        For Scenes, the deduplicated id is <Code>id: 61e86a5d1137bc002545ff11</Code>.
         <br />
         This endpoint creates{' '}
         <Link color={'blue.500'} href="/clean_application.json">
@@ -168,7 +168,7 @@ export const Verification = () => (
         <Text fontWeight={700} mt={2}>
           Note: the <em>appData</em> endpoint is not configured for Vercel/cloud
           hosting. This demo app was originally intended to be shared via repo zip
-          and ran locally, however there were issues with the applicant tracking
+          and run locally, however, there were issues with the applicant tracking
           system accepting my code. The{' '}
           <Link color={'blue.500'} href="/clean_application.json">
             output
@@ -212,7 +212,7 @@ export const Future = () => (
       <ListItem>
         Add Typescript Type checks to the Object and Scene endpoints.
       </ListItem>
-      <ListItem>Fix css background flashing on page load.</ListItem>
+      <ListItem>Fix CSS background flashing on page load.</ListItem>
     </UnorderedList>
   </Container>
 );
