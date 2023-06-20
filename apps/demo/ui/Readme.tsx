@@ -164,7 +164,17 @@ export const Verification = () => (
         <Link color={'blue.500'} href="/clean_application.json">
           clean_application.json
         </Link>
-        .
+        .<br />
+        <Text fontWeight={700} mt={2}>
+          Note: the <em>appData</em> endpoint is not configured for Vercel/cloud
+          hosting. This demo app was originally intended to be shared via repo zip
+          and ran locally, however there were issues with the applicant tracking
+          system accepting my code. The{' '}
+          <Link color={'blue.500'} href="/clean_application.json">
+            output
+          </Link>{' '}
+          is checked in. <em>Future Work</em> entry added.
+        </Text>
       </ListItem>
 
       <ListItem>
@@ -172,7 +182,10 @@ export const Verification = () => (
         <Link color={'blue.500'} href="/api/jest">
           Jest CI endpoint
         </Link>{' '}
-        passes all unit tests.
+        passes all unit tests.{' '}
+        <Text fontWeight={700}>
+          Not currently working on Vercel, see <em>Future Work</em>. Use locally.
+        </Text>
       </ListItem>
     </OrderedList>
   </Container>
@@ -183,7 +196,18 @@ export const Future = () => (
     <Heading as="h1" mb={5} size="xl">
       Future Work
     </Heading>
-    <UnorderedList>
+    <UnorderedList spacing={3}>
+      <ListItem>
+        Save the clean_application.json in a way that works in Vercel, which would be
+        cloud storage.
+      </ListItem>
+      <ListItem>
+        Workaround for Jest CI on Vercel; module is installed.{' '}
+        <Code color={'red.500'}>
+          error Error: Cannot find module &apos;jest-environment-node&apos;
+        </Code>
+        .
+      </ListItem>
       <ListItem>Extend deduplication to consider other identifiers</ListItem>
       <ListItem>
         Add Typescript Type checks to the Object and Scene endpoints.
