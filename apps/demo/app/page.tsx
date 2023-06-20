@@ -12,7 +12,7 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           <a
-            href="https://www.linkedin.com/in/matthewtorintaylor/"
+            href="https://github.com/m-torin/sky-koala"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <div>
           <a
-            href="https://www.skyKoala.com/"
+            href="https://www.linkedin.com/in/matthewtorintaylor/"
             rel="noopener noreferrer"
             target="_blank"
           >

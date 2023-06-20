@@ -2,7 +2,7 @@ import fetchMock from 'fetch-mock';
 
 import {fetchFromApi} from '../../utils/fetchApi';
 
-const API_BASE = `${process.env.webappUrl}/api`; // Base URL for the API
+const API_BASE = `${process.env.NEXT_PUBLIC_WEBAPP_URL}/api`; // Base URL for the API
 
 beforeEach(() => {
   fetchMock.restore();

@@ -188,6 +188,7 @@ export const Future = () => (
       <ListItem>
         Add Typescript Type checks to the Object and Scene endpoints.
       </ListItem>
+      <ListItem>Fix css background flashing on page load.</ListItem>
     </UnorderedList>
   </Container>
 );
